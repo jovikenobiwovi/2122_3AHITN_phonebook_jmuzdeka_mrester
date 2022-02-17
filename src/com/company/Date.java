@@ -1,6 +1,7 @@
 package com.company;
 
 
+
 public class Date {
     int day;
     int month;
@@ -26,6 +27,7 @@ public class Date {
      * @param date speichert Datum
      * @author Jovana
      * @details Speichert alle drei Werte in einen String
+     * @param date speichert Datum
      */
 
     public Date(String date) {
@@ -70,6 +72,7 @@ public class Date {
      * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      * @author Jovana
      * @details Prueft, ob es sich um ein Schaljahr haelt
+     * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      */
 
         public boolean isLeapYear(int year) {
@@ -85,9 +88,10 @@ public class Date {
      * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      * @author Jovana
      * @details Prueft ob ein gueltiger Wert in date ist
+     * @param date
+     * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      */
     public boolean isValid(int date) {
         return true;
     }
 }
-
