@@ -1,7 +1,6 @@
 package com.company;
 
 
-
 public class Date {
     int day;
     int month;
@@ -9,14 +8,14 @@ public class Date {
     String date;
 
     /**
+     * @param day   gespeichert Tag
+     * @param month gespeichert Monat
+     * @param year  gespeichert Jahr
      * @author Jovana
      * @date 17.02.2022
      * @details Konstruktor der day, month und year speichert
-     * @param day  gespeichert Tag
-     * @param month  gespeichert Monat
-     * @param year  gespeichert Jahr
      */
-    public Date(int day, int month, int year){
+    public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
@@ -24,18 +23,24 @@ public class Date {
     }
 
     /**
+     * @param date speichert Datum
      * @author Jovana
      * @details Speichert alle drei Werte in einen String
-     * @param date speichert Datum
      */
 
-    public Date(String date){
+    public Date(String date) {
+        String strday = Integer.toString(day);
+        String strmon = Integer.toString(month);
+        String stryear = Integer.toString(year);
+        this.date = strday + "." + strmon + "." + stryear;
+
+
     }
 
     /**
+     * @return gibt Wert in day zurueck
      * @author Jovana
      * @details Holt sich gespeicherten Wert in day
-     * @return gibt Wert in day zurueck
      */
 
     public int getDay() {
@@ -43,9 +48,9 @@ public class Date {
     }
 
     /**
+     * @return gibt Wert in month zurueck
      * @author Jovana
      * @details Holt sich gespeicherten Wert in month
-     * @return gibt Wert in month zurueck
      */
 
     public int getMonth() {
@@ -53,31 +58,36 @@ public class Date {
     }
 
     /**
+     * @return gibt Wert in year zurueck
      * @author Jovana
      * @details Holt sich gespeicherten Wert in year
-     * @return gibt Wert in year zurueck
      */
     public int getYear() {
         return year;
     }
 
     /**
+     * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      * @author Jovana
      * @details Prueft, ob es sich um ein Schaljahr haelt
-     * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      */
 
-    public boolean isLeapYear(){
-        return true;
-    }
+        public boolean isLeapYear(int year) {
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
     /**
-     * @author Jovana
-     * @details Prueft ob ein gueltiger Wert in date ist
      * @param date
      * @return true - jup, gueltig | false - nope, kein richtiges datum :(
+     * @author Jovana
+     * @details Prueft ob ein gueltiger Wert in date ist
      */
-    public boolean isValid(int date){
+    public boolean isValid(int date) {
         return true;
     }
 }
+
