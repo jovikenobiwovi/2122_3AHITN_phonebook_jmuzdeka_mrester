@@ -64,12 +64,4 @@ public class PhoneNumber {
         return country + ", " + areacode + ", " + number;
     }
 
-    /**
-     * prueft ob das Datum gueltig ist
-     * @param d
-     * @return boolean
-     */
-    public boolean isValid(Date d) {
-        return true;
-    }
 }

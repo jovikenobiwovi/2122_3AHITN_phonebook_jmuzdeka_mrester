@@ -91,7 +91,7 @@ public class Date {
      * @param date
      * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      */
-    public boolean isValid(int date) {
+    public static boolean isValid(int date) {
         return true;
     }
 }
