@@ -9,7 +9,9 @@ package com.company;
  * @author : Jovana
  */
 
-
+/**
+ * @details Speichert Daten/Eigenschaften des Datums
+ */
 public class Date {
     int day;
     int month;
@@ -43,8 +45,6 @@ public class Date {
         String strmon = Integer.toString(month);
         String stryear = Integer.toString(year);
         this.date = strday + "." + strmon + "." + stryear;
-
-
     }
 
     /**

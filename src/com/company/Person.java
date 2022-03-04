@@ -12,14 +12,16 @@
 
 package com.company;
 
-
+/**
+ * Speichert Daten/Eigenschaften einer Person
+ */
 public class Person {
 
     private String name;
 
     private String givenName;
 
-    private String nickName;
+    //private String nickName;
 
     private Date birthday;
 
@@ -45,7 +47,7 @@ public class Person {
      * @details gibt alle Daten einer Person zurueck
      */
     public String toString() {
-        return name + ", " + givenName + ", " + nickName + ", " + birthday + ", " + phone;
+        return name + givenName + birthday + phone;
     }
 
 }
