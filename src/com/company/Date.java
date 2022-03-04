@@ -5,6 +5,7 @@ package com.company;
  *----------------------------------------------------------------------------*/
 
 /**
+ * Datum Klasse zum Anlegen eines Geb
  * @author : Jovana
  */
 
