@@ -1,5 +1,12 @@
 package com.company;
+/*-----------------------------------------------------------------------------
+ *              Hoehere Technische Bundeslehranstalt STEYR
+ *           Fachrichtung Elektronik und Technische Informatik
+ *----------------------------------------------------------------------------*/
 
+/**
+ * @author : Jovana
+ */
 
 
 public class Date {
@@ -25,9 +32,9 @@ public class Date {
 
     /**
      * @param date speichert Datum
+     * @param date speichert Datum
      * @author Jovana
      * @details Speichert alle drei Werte in einen String
-     * @param date speichert Datum
      */
 
     public Date(String date) {
@@ -70,28 +77,35 @@ public class Date {
 
     /**
      * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
+     * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      * @author Jovana
      * @details Prueft, ob es sich um ein Schaljahr haelt
-     * @return true - jup, ein Schaltjahr | false - nope, kein Schaltjahr
      */
 
-        public boolean isLeapYear(int year) {
-            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-                return true;
-            } else {
-                return false;
-            }
+    public boolean isLeapYear(int year) {
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
         }
+    }
 
     /**
-     * @param date
+     * @param day
+     * @param month
+     * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      * @author Jovana
      * @details Prueft ob ein gueltiger Wert in date ist
-     * @param date
-     * @return true - jup, gueltig | false - nope, kein richtiges datum :(
      */
-    public static boolean isValid(int date) {
+    public boolean isValid(int day, int month) {
+        if (day > 31) {
+            System.out.println("nix gute");
+        }
+        if (month > 12) {
+            System.out.println("auch nix gute");
+        }
         return true;
+
     }
 }
