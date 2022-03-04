@@ -100,11 +100,12 @@ public class Date {
      */
     public boolean isValid(int day, int month) {
         if (day > 31) {
-            System.out.println("nix gute");
+            System.out.println("Kein gueltiger Tag");
         }
         if (month > 12) {
-            System.out.println("auch nix gute");
+            System.out.println("Kein gueltiges Monat");
         }
+
         return true;
 
     }
